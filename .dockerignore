@@ -1,0 +1,11 @@
+# Directorios
+node_modules
+dist
+
+# Archivos de Docker
+Dockerfile
+.dockerignore
+
+# Archivos de Git
+.git
+.gitignore
