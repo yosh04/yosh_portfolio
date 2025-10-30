@@ -2,7 +2,7 @@
 # 1. ETAPA DE CONSTRUCCIÓN (Build Stage)
 # --------------------
 # Usa una imagen de Node.js (por ejemplo, la versión 18) para construir la aplicación.
-FROM node:22.21-alpine3.22 as builder
+FROM node:alpine as builder
 
 # Establece el directorio de trabajo.
 WORKDIR /app
@@ -33,7 +33,7 @@ COPY --from=builder /app/dist /usr/share/nginx/html
 # puedes copiar aquí tu archivo nginx.conf.
 
 # Expone el puerto por defecto de Nginx.
-EXPOSE 80
+EXPOSE 8080
 
 # Comando para iniciar Nginx (el que viene por defecto en la imagen de Nginx).
 CMD ["nginx", "-g", "daemon off;"]
