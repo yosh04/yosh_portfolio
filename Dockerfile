@@ -33,7 +33,7 @@ COPY --from=builder /app/dist /usr/share/nginx/html
 # puedes copiar aquí tu archivo nginx.conf.
 
 # Expone el puerto por defecto de Nginx.
-EXPOSE 8080
+EXPOSE 80
 
 # Comando para iniciar Nginx (el que viene por defecto en la imagen de Nginx).
 CMD ["nginx", "-g", "daemon off;"]
